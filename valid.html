@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form validation</title>
+    <script type="text/javascript">
+      function formvalidation(){
+        if(form.name.value==""){alert("Name required..");}
+        else if(form.email.value==""){alert("Email required..");}
+        else if(form.state.value==""){alert("State required..");}
+        else if(form.visitingplace.value==""){alert("Visitingplace required..");}
+        else if(form.dov.value==""){alert("Date of visit required..");}
+        if(form.name.value!=="" &&form.email.value!="" &&form.state.value!="" &&form.visitingplace.value!=""&&form.dov.value!="" &&form.gender.value!=""){alert("Successfully completed!")}
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form" onSubmit="formvalidation()">
+      <h1>TOURIST PLACE REGISTRATION</h1>
+      <p><input type="text" class="ipt" name="name" placeholder="Enter your Name"></p>
+      <p><input type="text" class="ipt" name="email" placeholder="Enter your Email"></p>
+      <p><input type="text" class="ipt" name="state" placeholder="Enter your state"></p>
+      <p><input type="text" class="ipt" name="visitingplace" placeholder="Enter your visitingplace"></p>
+      <p><input type="date" class="ipt" name="dov"></p>
+      <p>
+        <input type="radio" id="male" name="gender">
+        <label for="male" class="rb">Male</label><br><br>
+        <input type="radio" id="female" name="gender">
+        <label for="female" class="rb">Female</label>
+      </p>
+      <p><input type="submit" class="sub" name="submit" value="Submit"></p>
+    </form>
+  </body>
+  <style>
+    h1 {
+    margin-left:auto;
+    font-family: Georgia;
+    }
+    body {
+    margin-left: 500px;
+    margin-top: 200px;
+    background-image: url("https://wallpaperaccess.com/full/2592094.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .ipt{
+    height: 50px;
+    width: 500px;
+    opacity: 0.7;
+    border-radius: 5px;
+    font-size: larger;
+    border: 3px solid chocolate
+    }
+    .rb {
+    opacity: 0.7;
+    border-radius: 5px;
+    font-size: larger;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid black
+    }
+    .sub {
+    margin-left: 200px;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    }
+  </style>
+</html>
